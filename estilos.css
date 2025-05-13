@@ -1,0 +1,342 @@
+/* ===== ESTILO GENERAL ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* capa oscura */
+  z-index: -1;
+}
+/* ESTO ES PRUEBA PARA VER COMO QUEDARIA */
+   h2 {
+  color: white !important; /* Forzar color blanco para todos los títulos */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* Sombra para mayor contraste */
+}
+.categorias button {
+  background-color: #444141;  /* Gris claro */
+  color: #000;                /* Texto negro */
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.categorias button:hover {
+  background-color: #ddd;
+}
+
+
+/* FIN DE PRUUUBEA*/
+
+
+  header {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  /* ===== PRODUCTOS DESTACADOS Y CATÁLOGO ===== */
+  .producto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .producto {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .producto h3 {
+    margin: 10px 0;
+  }
+  
+  .producto p {
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  
+  /* ===== BOTONES ===== */
+  button {
+    padding: 10px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1b5e20;
+  }
+  
+  /* ===== CATEGORÍAS (CATÁLOGO) ===== */
+  .categorias {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .categorias li button {
+    padding: 0.8rem 1.2rem;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .categorias li button:hover {
+    background-color: #00251a;
+  }
+  .eliminar {
+    margin-top: 10px;
+    background-color: #c62828;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .eliminar:hover {
+    background-color: #b71c1c;
+  }
+  /* FORMULARIOS DE LOGIN Y REGISTRO */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h2#saludo {
+  margin-bottom: 2rem;
+}
+
+/* Catálogo B2B – mejoras visuales */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.producto {
+  width: 280px;
+  background-color: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.producto h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem;
+}
+
+.producto p {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.producto button {
+  margin-bottom: 1rem;
+  padding: 10px;
+  width: 80%;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #1b5e20;
+}
+
+/* ETIQUETA DE PACK*/
+.etiqueta-oferta {
+  background-color: #d32f2f;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.producto.oferta {
+  position: relative;
+}
+/* Historial de pedidos */
+.pedido {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(61, 180, 5, 0.05);
+}
+
+.pedido p {
+  margin: 0.3rem 0;
+  font-size: 15px;
+}
+
+.pedido ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.pedido ul li {
+  list-style: square;
+  margin-bottom: 0.2rem;
+}
+
+.pedido strong {
+  color: #db0303;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000000;
+}
+body {
+  background-image: url('fondopantalla.jpg'); /*LINKS DEL FONDO DE PANTALLA*/
+  background-size: cover;               /* cubre toda la pantalla */
+  background-repeat: no-repeat;
+  background-position: center center;   /* perfectamente centrada */
+  background-attachment: fixed;
+  background-color: #111;              
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}

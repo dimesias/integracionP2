@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro - AutoParts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Registro de Usuario</h1>
+    <nav>
+      <ul>
+        <li><a href="paginainicio.html">Inicio</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form onsubmit="registrarUsuario(event)">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" required><br>
+        <label>Correo electrónico:</label>
+        <input type="email" id="correo" required><br>
+        <label>Contraseña:</label>
+        <input type="password" id="password" required><br>
+        <label>Tipo de usuario:</label>
+        <select id="rol" required>
+          <option value="">Selecciona una opción</option>
+          <option value="cliente">Cliente</option>
+          <option value="distribuidor">Distribuidor</option>
+        </select>
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+  </footer>
+
+<!-- SDK Firebase por CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // Tu configuración de Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+    authDomain: "integracionplatap1.firebaseapp.com",
+    projectId: "integracionplatap1",
+    storageBucket: "integracionplatap1.appspot.com",
+    messagingSenderId: "793550793229",
+    appId: "1:793550793229:web:ad2ef6fae594f495324344",
+    measurementId: "G-WSPZV3H6B2"
+  };
+
+  // Inicializar Firebase con versión 8
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  var auth = firebase.auth();
+</script>
+<script src="java.js"></script>
+
+
+</body>
+</html>

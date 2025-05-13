@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - AutoParts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+  <h1>Catálogo de Productos</h1>
+  <nav>
+    <ul>
+      <li><a href="paginainicio.html">Inicio</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="login.html">Iniciar sesión</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>SELECCIONA UNA CATEGORIA 📋</h2>
+    <ul class="categorias">
+      <li><button onclick="mostrarCategoria('motores')">Motores y Componentes</button></li>
+      <li><button onclick="mostrarCategoria('frenos')">Frenos y Suspensión</button></li>
+      <li><button onclick="mostrarCategoria('electricidad')">Electricidad y Baterías</button></li>
+      <li><button onclick="mostrarCategoria('accesorios')">Accesorios y Seguridad</button></li>
+    </ul>
+  </section>
+
+  <section id="productos" class="productos">
+    <!-- Los productos se cargarán dinámicamente desde java.js -->
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+</footer>
+
+<!-- SDK Firebase por CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // Tu configuración de Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+    authDomain: "integracionplatap1.firebaseapp.com",
+    projectId: "integracionplatap1",
+    storageBucket: "integracionplatap1.appspot.com",
+    messagingSenderId: "793550793229",
+    appId: "1:793550793229:web:ad2ef6fae594f495324344",
+    measurementId: "G-WSPZV3H6B2"
+  };
+
+  // Inicializar Firebase con versión 8
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  var auth = firebase.auth();
+</script>
+<script src="java.js"></script>
+
+
+</body>
+</html>

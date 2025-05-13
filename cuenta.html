@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi cuenta - AutoParts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Panel del Usuario</h1>
+    <nav>
+      <ul>
+        <li><a href="paginainicio.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="saludo">Bienvenido</h2>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
+
+    <section>
+      <h3>Historial de Pedidos</h3>
+      <div id="historial"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+  </footer>
+
+<!-- SDK Firebase por CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // Tu configuración de Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+    authDomain: "integracionplatap1.firebaseapp.com",
+    projectId: "integracionplatap1",
+    storageBucket: "integracionplatap1.appspot.com",
+    messagingSenderId: "793550793229",
+    appId: "1:793550793229:web:ad2ef6fae594f495324344",
+    measurementId: "G-WSPZV3H6B2"
+  };
+
+  // Inicializar Firebase con versión 8
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  var auth = firebase.auth();
+</script>
+<script src="java.js"></script>
+
+
+</body>
+</html>
+

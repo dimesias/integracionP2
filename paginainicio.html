@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AutoParts - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>AutoParts 🛠️🧰</h1>
+    <nav>
+      <ul>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="destacados">
+      <h2>PRODUCTOS  DESTACADOS 😎 ! </h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="filtro_aceite.jpg" alt="Filtro de aceite">
+          <h3>Filtro de Aceite Bosch</h3>
+          <p>$25.990</p>
+          <button onclick="agregarAlCarrito('Filtro de Aceite Bosch', 25990, 'filtro_aceite.jpg')">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="pastillas--frenos.jpg" alt="Pastillas de freno">
+          <h3>Pastillas de Freno Monroe</h3>
+          <p>$45.500</p>
+          <button onclick="agregarAlCarrito('Pastillas de Freno Monroe', 45500, 'pastillas--frenos.jpg')">Agregar al carrito</button>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- Configuración de Firebase -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+      authDomain: "integracionplatap1.firebaseapp.com",
+      projectId: "integracionplatap1",
+      storageBucket: "integracionplatap1.appspot.com",
+      messagingSenderId: "793550793229",
+      appId: "1:793550793229:web:ad2ef6fae594f495324344",
+      measurementId: "G-WSPZV3H6B2"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+  </script>
+
+  <!-- Funciones personalizadas -->
+  <script src="java.js"></script>
+</body>
+</html>

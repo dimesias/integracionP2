@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión - AutoParts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Iniciar sesión</h1>
+    <nav>
+      <ul>
+        <li><a href="paginainicio.html">Inicio</a></li>
+        <li><a href="registro.html">Registrarse</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form onsubmit="iniciarSesion(event)">
+        <label>Correo electrónico:</label>
+        <input type="email" id="correoLogin" required><br>
+
+        <label>Contraseña:</label>
+        <input type="password" id="passwordLogin" required><br>
+
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+      authDomain: "integracionplatap1.firebaseapp.com",
+      projectId: "integracionplatap1",
+      storageBucket: "integracionplatap1.appspot.com",
+      messagingSenderId: "793550793229",
+      appId: "1:793550793229:web:ad2ef6fae594f495324344",
+      measurementId: "G-WSPZV3H6B2"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+  </script>
+
+  <script src="java.js"></script>
+</body>
+</html>

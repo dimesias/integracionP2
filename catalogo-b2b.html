@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Mayorista - AutoParts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- Validación de acceso solo para distribuidores -->
+<script>
+  const usuario = JSON.parse(localStorage.getItem("usuarioActual"));
+  if (!usuario || usuario.rol !== "distribuidor") {
+    alert("Acceso restringido. Solo distribuidores pueden ver este catálogo.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<header>
+  <h1>Catálogo Exclusivo Distribuidores</h1>
+  <nav>
+    <ul>
+      <li><a href="paginainicio.html">Inicio</a></li>
+      <li><a href="carrito.html">Carrito</a></li>
+      <li><a href="cuenta.html">Mi cuenta</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="productos">
+
+    <div class="producto">
+      <img src="bujias.jpg" alt="Bujías">
+      <h3>Bujías NGK (Pack 10 unidades)</h3>
+      <p>$14.990</p>
+      <button onclick="agregarAlCarrito('Bujías NGK', 14990, 'bujias.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="discos_frenos.jpg" alt="Discos de Freno">
+      <h3>Discos de Freno Premium (x2)</h3>
+      <p>$62.000</p>
+      <button onclick="agregarAlCarrito('Discos de Freno Premium', 62000, 'discos_frenos.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="alternador.jpg" alt="Alternador">
+      <h3>Alternador Valeo Reforzado</h3>
+      <p>$109.990</p>
+      <button onclick="agregarAlCarrito('Alternador Valeo', 109990, 'alternador.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="kit-emergencia.jpg" alt="Kit de Emergencia">
+      <h3>Kit Profesional de Emergencia</h3>
+      <p>$12.500</p>
+      <button onclick="agregarAlCarrito('Kit de Emergencia', 12500, 'kit-emergencia.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="cubre-asiento.jpg" alt="Cubreasiento">
+      <h3>Cubreasientos de Alta Resistencia</h3>
+      <p>$21.990</p>
+      <button onclick="agregarAlCarrito('Cubreasiento Resistente', 21990, 'cubre-asiento.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="filtro_aceite.jpg" alt="Filtro de Aceite">
+      <h3>Filtro de Aceite Bosch PRO</h3>
+      <p>$19.990</p>
+      <button onclick="agregarAlCarrito('Filtro Aceite PRO', 19990, 'filtro_aceite.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="pastillas--frenos.jpg" alt="Pastillas de Freno">
+      <h3>Pastillas de Freno Ceramicadas</h3>
+      <p>$39.990</p>
+      <button onclick="agregarAlCarrito('Pastillas Ceramicadas', 39990, 'pastillas--frenos.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="bateria.jpg" alt="Batería">
+      <h3>Batería Bosch 60Ah Profesional</h3>
+      <p>$85.990</p>
+      <button onclick="agregarAlCarrito('Batería 60Ah', 85990, 'bateria.jpg')">Agregar al carrito</button>
+    </div>
+
+    <!-- OFERTAS EXCLUSIVAS -->
+    <div class="producto oferta">
+      <span class="etiqueta-oferta">PACK</span>
+      <img src="pastillas--frenos.jpg" alt="Pack Pastillas">
+      <h3>Pack Pastillas de Freno x5</h3>
+      <p>$159.990</p>
+      <button onclick="agregarAlCarrito('Pack Pastillas de Freno x5', 159990, 'pastillas--frenos.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto oferta">
+      <span class="etiqueta-oferta">PACK</span>
+      <img src="bateria.jpg" alt="Pack Baterías">
+      <h3>Baterías Bosch Pack x3</h3>
+      <p>$239.990</p>
+      <button onclick="agregarAlCarrito('Baterías Bosch Pack x3', 239990, 'bateria.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto oferta">
+      <span class="etiqueta-oferta">PACK</span>
+      <img src="kit-emergencia.jpg" alt="Kit x10">
+      <h3>Kit de Emergencia (x10 unidades)</h3>
+      <p>$99.900</p>
+      <button onclick="agregarAlCarrito('Kit de Emergencia x10', 99900, 'kit-emergencia.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto oferta">
+      <span class="etiqueta-oferta">PACK</span>
+      <img src="alternador.jpg" alt="Pack Alternadores">
+      <h3>Pack Alternadores Mixtos x4</h3>
+      <p>$389.000</p>
+      <button onclick="agregarAlCarrito('Pack Alternadores x4', 389000, 'alternador.jpg')">Agregar al carrito</button>
+    </div>
+
+    <div class="producto oferta">
+      <span class="etiqueta-oferta">PACK</span>
+      <img src="bujias.jpg" alt="Bujías x50">
+      <h3>Pack Bujías NGK (x50)</h3>
+      <p>$59.990</p>
+      <button onclick="agregarAlCarrito('Pack Bujías NGK x50', 59990, 'bujias.jpg')">Agregar al carrito</button>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 AutoParts. Todos los derechos reservados.</p>
+</footer>
+
+<!-- SDK Firebase por CDN -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // Tu configuración de Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyB5tG9ntb577qJc8zb_Vl0oq2DUn8H9Slw",
+    authDomain: "integracionplatap1.firebaseapp.com",
+    projectId: "integracionplatap1",
+    storageBucket: "integracionplatap1.appspot.com",
+    messagingSenderId: "793550793229",
+    appId: "1:793550793229:web:ad2ef6fae594f495324344",
+    measurementId: "G-WSPZV3H6B2"
+  };
+
+  // Inicializar Firebase con versión 8
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  var auth = firebase.auth();
+</script>
+
+<script src="java.js"></script>
+
+
+</body>
+</html>
